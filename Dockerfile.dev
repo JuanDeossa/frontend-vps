@@ -1,0 +1,14 @@
+FROM node:20-slim
+
+WORKDIR /app
+
+COPY bun.lock package.json tsconfig.json vite.config.ts ./
+COPY public ./public
+
+RUN npm install -g bun && bun install
+
+COPY src ./src
+
+EXPOSE 5173
+
+CMD ["bun", "dev"]
