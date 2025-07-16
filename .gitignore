@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Ignorar todos los archivos .env diferentes de template
+.env
+.env.local

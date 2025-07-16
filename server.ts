@@ -19,4 +19,3 @@ const server = Bun.serve({
 });
 
 console.log(`🚀 Servidor Bun en http://localhost:${server.port}`);
-

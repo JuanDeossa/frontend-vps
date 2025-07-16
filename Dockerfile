@@ -9,6 +9,9 @@ COPY src ./src
 
 RUN npm install -g bun
 RUN bun install
+
+COPY .env .env
+
 RUN bun run build
 
 # Etapa 2: Servir con Bun (sin crypto.hash necesario)
