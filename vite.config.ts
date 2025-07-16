@@ -11,4 +11,4 @@ export default defineConfig({
       interval: 100, // Adjust the polling interval as needed
     },
   },
-})
+  })
