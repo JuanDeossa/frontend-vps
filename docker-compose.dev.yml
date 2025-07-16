@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: frontend-dev
+    volumes:
+      - .:/app
+      - /app/node_modules  # evita conflictos entre host y contenedor
+    ports:
+      - "5173:5173"
+    command: bun dev
+    working_dir: /app
